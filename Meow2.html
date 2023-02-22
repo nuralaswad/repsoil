@@ -17,29 +17,23 @@
     />
    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script>
       $(document).ready(function() {
-       var url = "https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/gviz/tq?tqx=out:csv&sheet=Sheet1";
-			  $.ajax({
-				  type: "GET",
-				  url: url,
-				  dataType: "text",
-			  	success: function(data) {
-				  	var csvData = $.csv.toArrays(data);
-				  	var column1Data = [];
-				  	var column2Data = [];
-				  	var column3Data = [];
-				  	for (var i = 1; i < csvData.length; i++) {
-						column1Data.push(csvData[i][0]);
-					  	column2Data.push(csvData[i][1]);
-					  	column3Data.push(csvData[i][2]);
-					}
-				  	$("#column1").text(column1Data);
-					$("#column2").text(column2Data);
-				  	$("#column3").text(column3Data);
-				}
-			});
-		});
+       var sheetURL = "https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/edit#gid=Sheet1&single=true&output=csv";
+       var row = 2; //start from row 2 to skip header
+       var interval = 5000; //5 seconds interval for real-time data update
+	setInterval(function() {
+	    $.get(sheetURL, function(data) {
+	      var rows = data.split("\n");
+	      var cells = rows[row].split(",");
+	      $("#data1").text(cells[0]); //display data in the first column
+	      $("#data2").text(cells[1]); //display data in the second column
+	      $("#data3").text(cells[2]); //display data in the third column
+	      row++; //move to the next row for the next update
+	    });
+	  }, interval);
+	});
       </script>
   </head>
   <body>
@@ -115,7 +109,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Temperature</b
-        ><b class="temperature-c"><p><span id="column1"></span></p></b><b class="celcius-c">Celcius (°C)</b
+        ><b class="temperature-c"><p id="data1"></p></b><b class="celcius-c">Celcius (°C)</b
         ><img class="repsoil-bar-inner" alt="" src="./img/ellipse-4.svg" /><img
           class="mask-group-icon"
           alt=""
@@ -128,7 +122,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Moisture</b
-        ><b class="temperature-c"><p><span id="column2"></span></p></b><b class="percentage">Percentage (%)</b>
+        ><b class="temperature-c"><p id="data2"></p></b><b class="percentage">Percentage (%)</b>
         <img
           class="mask-group-icon1"
           alt=""
@@ -141,7 +135,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >EC</b
-        ><b class="temperature-c"><p><span id="column3"></span></p></b><b class="percentage">(uS/cm)</b
+        ><b class="temperature-c"><p id="data3"></p></b><b class="percentage">(uS/cm)</b
         ><img class="mask-group-icon1" alt="" src="./img/mask-group2.svg" />
       </div>
       <b class="device1">Device</b
