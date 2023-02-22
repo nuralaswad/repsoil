@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // Load the Google Spreadsheet
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/2PACX-1vSw6FFE3oWLTyGWe1111c9HeGtEhlB68N6GaYIEINHMGQMAE73uz0rUF_q70PTduF0MeAKUtHW1mMv7/pubhtml';
+    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/pubhtml';
     var options = {
       callback: showInfo,
       simpleSheet: true
