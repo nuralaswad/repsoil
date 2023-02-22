@@ -23,9 +23,9 @@
          download: true,
          header: true,
          complete: function(results) {
-            var col1Data = results.data.map(function(row) { return row["A"]; });
-            var col2Data = results.data.map(function(row) { return row["B"]; });
-            var col3Data = results.data.map(function(row) { return row["C"]; });
+            var col1Data = results.data.map(function(row) { return row["1"]; });
+            var col2Data = results.data.map(function(row) { return row["2"]; });
+            var col3Data = results.data.map(function(row) { return row["3"]; });
             $("#col1").text(col1Data.join(", "));
             $("#col2").text(col2Data.join(", "));
             $("#col3").text(col2Data.join(", "));
