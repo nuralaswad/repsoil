@@ -17,7 +17,6 @@
     />
    	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
@@ -40,20 +39,20 @@
         var col2Data = '';
         var col3Data = '';
         for (var i = data.length - 1; i >= 0; i--) {
-          if (data[i]['Column 1'] !== '') {
-            col1Data = data[i]['Column 1'];
+          if (data[i]['A'] !== '') {
+            col1Data = data[i]['A'];
             break;
           }
         }
         for (var i = data.length - 1; i >= 0; i--) {
-          if (data[i]['Column 2'] !== '') {
-            col2Data = data[i]['Column 2'];
+          if (data[i]['B'] !== '') {
+            col2Data = data[i]['B'];
             break;
           }
         }
         for (var i = data.length - 1; i >= 0; i--) {
-          if (data[i]['Column 3'] !== '') {
-            col3Data = data[i]['Column 3'];
+          if (data[i]['C'] !== '') {
+            col3Data = data[i]['C'];
             break;
           }
         }
@@ -157,7 +156,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Moisture</b
-        ><b class="temperature-c"><p id="col2"></p></b><b class="percentage">Percentag (%)</b>
+        ><b class="temperature-c"><p id="col2"></p></b><b class="percentage">Percentage (%)</b>
         <img
           class="mask-group-icon1"
           alt=""
@@ -170,7 +169,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >EC</b
-	      ><b class="temperature-c"><p><span id="col3"></span></p></b><b class="percentage">(uS/cm)</b
+	      ><b class="temperature-c"><p id="col3"></p></b><b class="percentage">(uS/cm)</b
         ><img class="mask-group-icon1" alt="" src="./img/mask-group2.svg" />
       </div>
       <b class="device1">Device</b
