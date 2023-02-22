@@ -20,19 +20,51 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script>
       $(document).ready(function() {
-       var sheetURL = "https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/edit#gid=Sheet1&single=true&output=csv";
-       var row = 2; //start from row 2 to skip header
-       var interval = 5000; //5 seconds interval for real-time data update
-	setInterval(function() {
-	    $.get(sheetURL, function(data) {
-	      var rows = data.split("\n");
-	      var cells = rows[row].split(",");
-	      $("#data1").text(cells[0]); //display data in the first column
-	      $("#data2").text(cells[1]); //display data in the second column
-	      $("#data3").text(cells[2]); //display data in the third column
-	      row++; //move to the next row for the next update
-	    });
-	  }, interval);
+        // Load the Google Spreadsheet
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/pubhtml';
+  var options = {
+    callback: showInfo,
+    simpleSheet: true
+  };
+  Tabletop.init(options);
+
+  // Function to display the data
+  function showInfo(data) {
+
+    // Get the latest non-empty data from the columns
+    var col1Data = '';
+    var col2Data = '';
+    var col3Data = '';
+    for (var i = data.length - 1; i >= 0; i--) {
+      if (data[i]['Column 1'] !== '') {
+        col1Data = data[i]['Column 1'];
+        break;
+      }
+    }
+    for (var i = data.length - 1; i >= 0; i--) {
+      if (data[i]['Column 2'] !== '') {
+        col2Data = data[i]['Column 2'];
+        break;
+      }
+    }
+    for (var i = data.length - 1; i >= 0; i--) {
+      if (data[i]['Column 3'] !== '') {
+        col3Data = data[i]['Column 3'];
+        break;
+      }
+    }
+
+    // Update the text on the HTML page
+    $('#col1').text(col1Data);
+    $('#col2').text(col2Data);
+    $('#col3').text(col3Data);
+
+    // Set a timeout to refresh the data every 10 seconds
+    setTimeout(function() {
+      Tabletop.init(options);
+    }, 10000);
+  }
+});
 	});
       </script>
   </head>
@@ -109,7 +141,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Temperature</b
-	      ><b class="temperature-c"><p><span id="data1"></span></p></b><b class="celcius-c">Celcius (°C)</b
+	      ><b class="temperature-c"><p><span id="col1"></span></p></b><b class="celcius-c">Celcius (°C)</b
         ><img class="repsoil-bar-inner" alt="" src="./img/ellipse-4.svg" /><img
           class="mask-group-icon"
           alt=""
@@ -122,7 +154,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Moisture</b
-        ><b class="temperature-c"><p><span id="data2"></span></p></b><b class="percentage">Percentage (%)</b>
+        ><b class="temperature-c"><p><span id="col2"></span></p></b><b class="percentage">Percentage (%)</b>
         <img
           class="mask-group-icon1"
           alt=""
@@ -135,7 +167,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >EC</b
-        ><b class="temperature-c"><p><span id="data3"></span></p></b><b class="percentage">(uS/cm)</b
+        ><b class="temperature-c"><p><span id="col3"></span></p></b><b class="percentage">(uS/cm)</b
         ><img class="mask-group-icon1" alt="" src="./img/mask-group2.svg" />
       </div>
       <b class="device1">Device</b
