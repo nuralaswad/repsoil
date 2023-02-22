@@ -19,19 +19,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" </script>
    <script>
       $(document).ready(function() {
-      Papa.parse("[https://docs.google.com/spreadsheets/d/e/2PACX-1vSw6FFE3oWLTyGWe1111c9HeGtEhlB68N6GaYIEINHMGQMAE73uz0rUF_q70PTduF0MeAKUtHW1mMv7/pub?gid=0&single=true&output=csv]", {
-         download: true,
-         header: true,
-         complete: function(results) {
-            var col1Data = results.data.map(function(row) { return row["1"]; });
-            var col2Data = results.data.map(function(row) { return row["2"]; });
-            var col3Data = results.data.map(function(row) { return row["3"]; });
-            $("#col1").text(col1Data.join(", "));
-            $("#col2").text(col2Data.join(", "));
-            $("#col3").text(col2Data.join(", "));
-         }
-      });
-   });
+       var url = "https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/gviz/tq?tqx=out:csv&sheet=Sheet1";
+			  $.ajax({
+				  type: "GET",
+				  url: url,
+				  dataType: "text",
+			  	success: function(data) {
+				  	var csvData = $.csv.toArrays(data);
+				  	var column1Data = [];
+				  	var column2Data = [];
+				  	var column3Data = [];
+				  	for (var i = 1; i < csvData.length; i++) {
+						  column1Data.push(csvData[i][0]);
+					  	column2Data.push(csvData[i][1]);
+					  	column3Data.push(csvData[i][2]);
+					}
+				  	$("#column1").text(column1Data.join(", "));
+					  $("#column2").text(column2Data.join(", "));
+				  	$("#column3").text(column3Data.join(", "));
+				}
+			});
+		});
       </script>
   </head>
   <body>
@@ -107,7 +115,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Temperature</b
-        ><b class="temperature-c"><p><span id="col1"></span></p></b><b class="celcius-c">Celcius (°C)</b
+        ><b class="temperature-c"><h1>spreadsheet</h1><p>Column 1: <span id="column1"></span></p>></b><b class="celcius-c">Celcius (°C)</b
         ><img class="repsoil-bar-inner" alt="" src="./img/ellipse-4.svg" /><img
           class="mask-group-icon"
           alt=""
