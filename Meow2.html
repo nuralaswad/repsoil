@@ -24,7 +24,7 @@
    <script>
       $(document).ready(function() {
         // Load the Google Spreadsheet
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/pubhtml';
+  var public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit#gid=[SHEET_ID]&single=true&output=csv";
   var options = {
     callback: showInfo,
     simpleSheet: true
@@ -65,7 +65,7 @@
     // Set a timeout to refresh the data every 10 seconds
     setTimeout(function() {
       Tabletop.init(options);
-    }, 10000);
+    }, 1000);
   }
 });
 	});
