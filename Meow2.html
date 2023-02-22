@@ -16,6 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
    	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
@@ -23,8 +25,7 @@
 	<script src="app.js"></script>
    <script>
      $(document).ready(function() {
-	  var sheetURL = "https://docs.google.com/spreadsheets/d/[SPREADSHEET_ID]/edit#gid=[SHEET_ID]&single=true&output=csv";
-	  var interval = 5000; //5 seconds interval for real-time data update
+	  var sheetURL = "https://docs.google.com/spreadsheets/d/1waWDtnICSNIqL3sY5Z9iuhrBmCRY4GXiw1tDL20knPk/edit#gid=Sheet1&single=true&output=csv";
       var options = {
         callback: showInfo,
         simpleSheet: true
@@ -156,7 +157,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Moisture</b
-        ><b class="temperature-c"><p id="col2"></p></b><b class="percentage">Percentage (%)</b>
+        ><b class="temperature-c"><p id="col2"></p></b><b class="percentage">Percentag (%)</b>
         <img
           class="mask-group-icon1"
           alt=""
@@ -169,7 +170,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >EC</b
-	      ><b class="temperature-c"><p><span id="col3"></span></p></b><b class="percentage">(uS/m)</b
+	      ><b class="temperature-c"><p><span id="col3"></span></p></b><b class="percentage">(uS/cm)</b
         ><img class="mask-group-icon1" alt="" src="./img/mask-group2.svg" />
       </div>
       <b class="device1">Device</b
