@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/repsoil.css" />
+    <link rel="stylesheet" href="./css/dashboard2.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  </head>
+  <body>
+    <div class="desktop-2">
+      <div class="search-and-profile-account-bar">
+        <img
+          class="entypodots-three-vertical-icon"
+          alt=""
+          src="./img/entypodotsthreevertical.svg"
+        /><img
+          class="search-and-profile-account-bar-child"
+          alt=""
+          src="./img/ellipse-1@2x.png"
+        />
+        <div class="as-shakirin">As Shakirin</div>
+      </div>
+      <div class="side-menu">
+        <div class="side-navigation"></div>
+        <div class="side-menu-child"></div>
+        <img class="logo-icon" alt="" src="./img/logo.svg" />
+        <div class="settings-side">
+          <b class="settings">Settings</b
+          ><img
+            class="icon-chevron-down1"
+            alt=""
+            src="./img/-icon-chevron-down.svg"
+          /><img class="icon-filter" alt="" src="./img/-icon-filter.svg" />
+        </div>
+        <div class="dashboard-side" id="dashboardSideContainer">
+          <b class="dashboard">Dashboard</b
+          ><img
+            class="icon-chevron-down2"
+            alt=""
+            src="./img/-icon-chevron-down2.svg"
+          /><img class="icon-grid" alt="" src="./img/-icon-grid.svg" />
+        </div>
+        <div class="device-side">
+          <div class="device-side-child"></div>
+          <b class="device">Device</b
+          ><img
+            class="icon-chevron-down3"
+            alt=""
+            src="./img/-icon-chevron-down.svg"
+          /><img class="icon-mobile" alt="" src="./img/-icon-mobile.svg" />
+        </div>
+        <div class="data-side">
+          <b class="data">Data</b
+          ><img
+            class="icon-chevron-down4"
+            alt=""
+            src="./img/-icon-chevron-down.svg"
+          /><img
+            class="icon-bar-chart-alt"
+            alt=""
+            src="./img/-icon-bar-chart-alt.svg"
+          />
+        </div>
+        <div class="log-out">
+          <b class="log-out1">Log Out</b
+          ><img class="icon-log-out" alt="" src="./img/-icon-log-out.svg" />
+        </div>
+        <div class="help">
+          <img
+            class="icon-clipboard-list"
+            alt=""
+            src="./img/-icon-clipboard-list.svg"
+          /><b class="help-getting">Help & Getting Started</b>
+        </div>
+      </div>
+      <div class="repsoil-bar">
+        <div class="repsoil-bar-child"></div>
+        <div class="online">Online</div>
+        <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
+          class="temperature"
+          >Temperature</b
+        ><p id="col1"><b class="temperature-c">30</b></p><b class="celcius-c">Celcius (°C)</b
+        ><img class="repsoil-bar-inner" alt="" src="./img/ellipse-4.svg" /><img
+          class="mask-group-icon"
+          alt=""
+          src="./img/mask-group.svg"
+        />
+      </div>
+      <div class="moisture-bar">
+        <div class="repsoil-bar-child"></div>
+        <div class="online">Online</div>
+        <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
+          class="temperature"
+          >Moisture</b
+        ><p id="col2"></p><b class="temperature-c">29.9</b> </p><b class="percentage">Percentage (%)</b>
+        <img
+          class="mask-group-icon1"
+          alt=""
+          src="./img/mask-group1.svg"
+        /><img class="moisture-1-icon" alt="" src="./img/moisture-1.svg" />
+      </div>
+      <div class="ec-bar">
+        <div class="repsoil-bar-child"></div>
+        <div class="online">Online</div>
+        <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
+          class="temperature"
+          >EC</b
+        ><p id="col3"></p><b class="temperature-c">154</b></p><b class="percentage">(uS/cm)</b
+        ><img class="mask-group-icon1" alt="" src="./img/mask-group2.svg" />
+      </div>
+      <b class="device1">Device</b
+      ><img class="energy-1-icon" alt="" src="./img/energy-1.svg" />
+      <div class="dropdown-menu">
+        <div class="dropdown-menu-child"></div>
+        <img
+          class="icon-chevron-down5"
+          alt=""
+          src="./img/-icon-chevron-down.svg"
+        />
+        <div class="select-repsoil">Select Repsoil</div>
+        <img class="icon-computer1" alt="" src="./img/-icon-computer.svg" />
+      </div>
+      <div class="search-bar">
+        <div class="search-bar-child"></div>
+        <div class="search-using-keywords">
+          Search using keywords or name ...
+        </div>
+        <img class="vector-icon" alt="" src="./img/vector.svg" /><img
+          class="close-searchbar-icon"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <script>
+      var dashboardSideContainer = document.getElementById("dashboardSideContainer");
+      if (dashboardSideContainer) {
+        dashboardSideContainer.addEventListener("click", function (e) {
+          window.location.href = "./desktop-1.html";
+        });
+      }
+      $(document).ready(function() {
+      Papa.parse("[https://docs.google.com/spreadsheets/d/e/2PACX-1vSw6FFE3oWLTyGWe1111c9HeGtEhlB68N6GaYIEINHMGQMAE73uz0rUF_q70PTduF0MeAKUtHW1mMv7/pub?gid=0&single=true&output=csv]", {
+         download: true,
+         header: true,
+         complete: function(results) {
+            var col1Data = results.data.map(function(row) { return row["A"]; });
+            var col2Data = results.data.map(function(row) { return row["B"]; });
+            var col3Data = results.data.map(function(row) { return row["C"]; });
+            $("#col1").text(col1Data.join(", "));
+            $("#col2").text(col2Data.join(", "));
+            $("#col3").text(col2Data.join(", "));
+         }
+      });
+   });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,516 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+.entypodots-three-vertical-icon {
+  position: absolute;
+  top: 18px;
+  left: 283px;
+  width: 28px;
+  height: 26px;
+  overflow: hidden;
+}
+.search-and-profile-account-bar-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 57px;
+  height: 63px;
+  object-fit: cover;
+}
+.as-shakirin {
+  position: absolute;
+  top: 19px;
+  left: 65px;
+  display: inline-block;
+  width: 158.16px;
+  height: 23.14px;
+}
+.search-and-profile-account-bar {
+  position: absolute;
+  top: 43px;
+  left: 1080px;
+  width: 311px;
+  height: 63px;
+  text-align: center;
+  color: var(--color-black);
+  font-family: var(--font-roboto);
+}
+.side-navigation {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+}
+.side-menu-child {
+  position: absolute;
+  top: 861.5px;
+  left: 19.5px;
+  border-top: 1px solid var(--color-lightslategray-200);
+  box-sizing: border-box;
+  width: 245px;
+  height: 1px;
+}
+.logo-icon {
+  position: absolute;
+  height: 5%;
+  width: 17.98%;
+  top: 5.96%;
+  right: 50.09%;
+  bottom: 89.04%;
+  left: 31.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  opacity: 0.8;
+}
+.settings {
+  position: absolute;
+  top: 19.05%;
+  left: 17.3%;
+}
+.icon-chevron-down1,
+.icon-filter {
+  position: absolute;
+  height: 44.14%;
+  width: 7.43%;
+  top: 42.86%;
+  right: 0;
+  bottom: 13%;
+  left: 92.57%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.icon-filter {
+  height: 98.29%;
+  width: 9.35%;
+  top: 0;
+  right: 90.65%;
+  bottom: 1.71%;
+  left: 0;
+}
+.settings-side {
+  position: absolute;
+  height: 2.05%;
+  width: 75.05%;
+  top: 38.48%;
+  right: 10.92%;
+  bottom: 59.47%;
+  left: 14.04%;
+  color: var(--color-lightslategray-100);
+}
+.dashboard {
+  position: absolute;
+  top: 18.52%;
+  left: 18.06%;
+}
+.icon-chevron-down2,
+.icon-grid {
+  position: absolute;
+  height: 34.33%;
+  width: 7.36%;
+  top: 37.04%;
+  right: 0;
+  bottom: 28.63%;
+  left: 92.64%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.icon-grid {
+  height: 100%;
+  width: 11.58%;
+  top: 0;
+  right: 88.42%;
+  bottom: 0;
+  left: 0;
+}
+.dashboard-side {
+  position: absolute;
+  height: 2.64%;
+  width: 75.75%;
+  top: 19.92%;
+  right: 10.92%;
+  bottom: 77.44%;
+  left: 13.33%;
+  cursor: pointer;
+}
+.device-side-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-ghostwhite);
+}
+.device {
+  position: absolute;
+  top: 31.66%;
+  left: 25.29%;
+}
+.icon-chevron-down3,
+.icon-mobile {
+  position: absolute;
+  height: 22.58%;
+  width: 5.91%;
+  top: 43.84%;
+  right: 8.93%;
+  bottom: 33.58%;
+  left: 85.16%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.icon-mobile {
+  height: 73.06%;
+  width: 7.44%;
+  top: 14.61%;
+  right: 81.03%;
+  bottom: 12.32%;
+  left: 11.53%;
+}
+.device-side {
+  position: absolute;
+  height: 4.01%;
+  width: 94.35%;
+  top: 25.29%;
+  right: 2.49%;
+  bottom: 70.7%;
+  left: 3.16%;
+  color: var(--color-darkslategray);
+}
+.data {
+  position: absolute;
+  top: 13.66%;
+  left: 17.3%;
+}
+.icon-bar-chart-alt,
+.icon-chevron-down4 {
+  position: absolute;
+  height: 42.21%;
+  width: 7.43%;
+  top: 36.43%;
+  right: 0;
+  bottom: 21.36%;
+  left: 92.57%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.icon-bar-chart-alt {
+  height: 100%;
+  width: 9.35%;
+  top: 0;
+  right: 90.65%;
+  bottom: 0;
+  left: 0;
+}
+.data-side {
+  position: absolute;
+  height: 2.14%;
+  width: 75.05%;
+  top: 32.42%;
+  right: 10.92%;
+  bottom: 65.43%;
+  left: 14.04%;
+  color: var(--color-lightslategray-100);
+}
+.icon-log-out,
+.log-out1 {
+  position: absolute;
+  top: 21.88%;
+  left: 45.45%;
+}
+.icon-log-out {
+  height: 100%;
+  width: 28.28%;
+  top: 0;
+  right: 71.72%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.log-out {
+  position: absolute;
+  height: 3.13%;
+  width: 34.74%;
+  top: 93.46%;
+  right: 52.63%;
+  bottom: 3.42%;
+  left: 12.63%;
+}
+.icon-clipboard-list {
+  position: absolute;
+  height: 100%;
+  width: 11.61%;
+  top: 0;
+  right: 88.39%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.help,
+.help-getting {
+  position: absolute;
+  top: 22.02%;
+  left: 18.95%;
+}
+.help {
+  height: 3.55%;
+  width: 66.67%;
+  top: 86.91%;
+  right: 19.3%;
+  bottom: 9.54%;
+  left: 14.04%;
+}
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 285px;
+  height: 1024px;
+  font-size: var(--font-size-xs);
+  color: var(--color-lightsteelblue);
+}
+.repsoil-bar-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-sm);
+  background-color: var(--color-white);
+  box-shadow: var(--drop-shadow-smaller);
+  width: 332px;
+  height: 224px;
+}
+.online {
+  position: absolute;
+  top: 21px;
+  left: 254px;
+  font-weight: 300;
+}
+.repsoil-bar-item {
+  position: absolute;
+  top: 27px;
+  left: 234px;
+  width: 12px;
+  height: 12px;
+}
+.celcius-c,
+.temperature,
+.temperature-c {
+  position: absolute;
+  top: 21px;
+  left: 31px;
+  font-size: var(--font-size-xl);
+}
+.celcius-c,
+.temperature-c {
+  top: 64px;
+  font-size: var(--font-size-3xl);
+}
+.celcius-c {
+  top: 114px;
+  left: 28px;
+  font-size: var(--font-size-sm);
+}
+.repsoil-bar-inner {
+  position: absolute;
+  top: 59.5px;
+  left: 162.5px;
+  width: 148px;
+  height: 134px;
+}
+.mask-group-icon,
+.repsoil-bar {
+  position: absolute;
+  top: 51px;
+  left: 149px;
+  width: 145px;
+  height: 155.5px;
+}
+.repsoil-bar {
+  top: 291px;
+  left: 319px;
+  width: 332px;
+  height: 224px;
+  font-size: var(--font-size-base);
+}
+.percentage {
+  position: absolute;
+  top: 117px;
+  left: 31px;
+  font-size: var(--font-size-sm);
+}
+.mask-group-icon1,
+.moisture-1-icon {
+  position: absolute;
+  top: 51px;
+  left: 153px;
+  width: 161.5px;
+  height: 155.5px;
+}
+.moisture-1-icon {
+  top: 94px;
+  left: 204px;
+  width: 72px;
+  height: 70px;
+  overflow: hidden;
+}
+.ec-bar,
+.moisture-bar {
+  position: absolute;
+  top: 289px;
+  left: 685px;
+  width: 332px;
+  height: 224px;
+  font-size: var(--font-size-base);
+}
+.ec-bar {
+  left: 1059px;
+}
+.device1 {
+  position: absolute;
+  top: 132px;
+  left: 319px;
+  font-size: var(--font-size-2xl);
+}
+.energy-1-icon {
+  position: absolute;
+  top: 378px;
+  left: 1262px;
+  width: 73px;
+  height: 76px;
+  overflow: hidden;
+}
+.dropdown-menu-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.11);
+}
+.icon-chevron-down5 {
+  position: absolute;
+  height: 16.85%;
+  width: 4.79%;
+  top: 49.09%;
+  right: 7.86%;
+  bottom: 34.05%;
+  left: 87.35%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.select-repsoil {
+  position: absolute;
+  height: 43.64%;
+  width: 76.2%;
+  top: 29.09%;
+  left: 11.14%;
+  display: inline-block;
+}
+.icon-computer1 {
+  position: absolute;
+  height: 49.09%;
+  width: 7.83%;
+  top: 32.73%;
+  right: 83.43%;
+  bottom: 18.18%;
+  left: 8.73%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 204px;
+  left: 319px;
+  width: 332px;
+  height: 55px;
+  text-align: center;
+  color: var(--color-dimgray);
+  font-family: var(--font-roboto);
+}
+.search-bar-child {
+  position: absolute;
+  height: 100%;
+  width: 9.97%;
+  top: 0;
+  right: 90.03%;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.11);
+}
+.search-using-keywords {
+  position: absolute;
+  height: 45.76%;
+  width: 52.87%;
+  top: 27.12%;
+  left: 10.79%;
+  display: inline-block;
+  opacity: 0;
+}
+.close-searchbar-icon,
+.vector-icon {
+  position: absolute;
+  height: 58.65%;
+  width: 4.21%;
+  top: 16.81%;
+  right: 92.93%;
+  bottom: 24.55%;
+  left: 2.86%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.close-searchbar-icon {
+  height: 59.32%;
+  width: 4.78%;
+  top: 18.64%;
+  right: 92.62%;
+  bottom: 22.03%;
+  left: 2.6%;
+  opacity: 0;
+}
+.search-bar {
+  position: absolute;
+  top: 58px;
+  left: 319px;
+  width: 732px;
+  height: 59px;
+  text-align: center;
+  color: var(--color-dimgray);
+  font-family: var(--font-roboto);
+}
+.desktop-2 {
+  position: relative;
+  border-radius: var(--br-md);
+  background-color: var(--color-ghostwhite);
+  box-shadow: 0 8px 34px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-darkslategray);
+  font-family: var(--font-inter);
+}
