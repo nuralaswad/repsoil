@@ -16,6 +16,21 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+    $(document).ready(function() {
+      setInterval(function() {
+        $.ajax({
+          url: "http://127.0.0.1:1880/getSensorData",
+          dataType: "json",
+          success: function(data) {
+            $("#value1").text(data.temperature);
+            $("#value2").text(data.humidity);
+	    $("#value3").text(data.ec);
+          }
+        });
+      }, 5000); // update every 5 seconds
+    });
+  </script>
   </head>
   <body>
     <div class="desktop-2">
@@ -142,20 +157,5 @@
         />
       </div>
     </div>
-  <script>
-    $(document).ready(function() {
-      setInterval(function() {
-        $.ajax({
-          url: "http://127.0.0.1:1880/getSensorData",
-          dataType: "json",
-          success: function(data) {
-            $("#value1").text(data.temperature);
-            $("#value2").text(data.humidity);
-	    $("#value3").text(data.ec);
-          }
-        });
-      }, 5000); // update every 5 seconds
-    });
-  </script>
   </body>
 </html>
