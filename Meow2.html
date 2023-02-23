@@ -17,15 +17,24 @@
     />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script>
-    $(document).ready(function() {
-      setInterval(function() {
-        $.ajax({
-          url: "http://127.0.0.1:1880/getSensorData",
-          dataType: "json",
-          success: function(data) {
-            $("#value1").text(data.temperature);
-            $("#value2").text(data.humidity);
-	    $("#value3").text(data.ec);
+    // Make an HTTP request to retrieve the data from Node-RED
+const xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if (this.readyState === 4 && this.status === 200) {
+    // Parse the response data as JSON
+    const data = JSON.parse(this.responseText);
+    // Access the data fields you want to display
+    const value1 = data.temperature;
+    const value2 = data.humidity;
+    const value3 = data.ec;
+    // Update your HTML elements with the retrieved data
+    document.getElementById("value1").innerText = value1;
+    document.getElementById("value2").innerText = value2;
+    document.getElementById("value3").innerText = value2;
+  }
+};
+xhr.open("GET", "http://127.0.0.1:1880/data", true);
+xhr.send();
           }
         });
       }, 5000); // update every 5 seconds
