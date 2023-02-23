@@ -103,7 +103,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Moisture</b
-	      ><b class="temperature-c" span id="col2">23</span></b><b class="percentage">Percentage (%)</b>
+	      ><b class="temperature-c"><span id="col2"></span></b><b class="percentage">Percentage (%)</b>
         <img
           class="mask-group-icon1"
           alt=""
@@ -116,7 +116,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >EC</b
-	      ><b class="temperature-c"><span id="col3">30</span></b><b class="percentage">(uS/m)</b
+	      ><b class="temperature-c"><span id="col3"></span></b><b class="percentage">(uS/m)</b
         ><img class="mask-group-icon1" alt="" src="./img/mask-group2.svg" />
       </div>
       <b class="device1">Device</b
@@ -142,11 +142,11 @@
         />
       </div>
     </div>
-    	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js" integrity="sha512-USPCA7jmJHlCNRSFwUFq3lAm9SaOjwG8TaB8riqx3i/dAJqhaYilVnaf2eVUH5zjq89BU6YguUuAno+jpRvUqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.6.3/tabletop.min.js" integrity="sha512-cwBWq9a2PF03LT6y4DzVz4UR4makhMYlYrbV4wy9r7GbDiriYMnM8hMcd8/livzpHlD8tiuots54lMxfc3Ah+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
      $(document).ready(function() {
 
@@ -166,19 +166,19 @@
       var col2Data = '';
       var col3Data = '';
       for (var i = data.length - 1; i >= 0; i--) {
-        if (data[i]['Column 1'] !== '') {
+        if (data[i]['A'] !== '') {
           col1Data = data[i]['Column 1'];
           break;
         }
       }
       for (var i = data.length - 1; i >= 0; i--) {
-        if (data[i]['Column 2'] !== '') {
+        if (data[i]['B'] !== '') {
           col2Data = data[i]['Column 2'];
           break;
         }
       }
       for (var i = data.length - 1; i >= 0; i--) {
-        if (data[i]['Column 3'] !== '') {
+        if (data[i]['C'] !== '') {
           col3Data = data[i]['Column 3'];
           break;
         }
