@@ -91,7 +91,7 @@
         <img class="repsoil-bar-item" alt="" src="./img/ellipse-2.svg" /><b
           class="temperature"
           >Temperature</b
-	      ><b class="temperature-c"></b><p id="col1"></p><b class="celcius-c">Celcius (°C)</b
+	      ><b class="temperature-c"></b><p id="col1">3</p><b class="celcius-c">Celcius (°C)</b
         ><img class="repsoil-bar-inner" alt="" src="./img/ellipse-4.svg" /><img
           class="mask-group-icon"
           alt=""
@@ -150,6 +150,10 @@ $(document).ready(function() {
     var col1Data = '';
     var col2Data = '';
     var col3Data = '';
+
+    setInterval(function() {
+    $.get(sheetURL, function(data) {
+      
     for (var i = data.length - 1; i >= 0; i--) {
       if (data[i]['Column 1'] !== '') {
         col1Data = data[i]['Column 1'];
@@ -167,12 +171,10 @@ $(document).ready(function() {
         col3Data = data[i]['Column 3'];
         break;
       }
-    }
-    setInterval(function() {
-      $.get(sheetURL, function(data) {
-        $("#col1").text(col1Data); //display data in the first column
+	$("#col1").text(col1Data); //display data in the first column
         $("#col2").text(col2Data); //display data in the second column
         $("#col3").text(col3Data); //display data in the third column
+    }
       });
     }, interval);
   });
