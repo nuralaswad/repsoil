@@ -146,7 +146,7 @@
     $(document).ready(function() {
       setInterval(function() {
         $.ajax({
-          url: "http://localhost:1880/getSensorData",
+          url: "http://127.0.0.1:1880/getSensorData",
           dataType: "json",
           success: function(data) {
             $("#value1").text(data.temperature);
